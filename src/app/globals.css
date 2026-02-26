@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --main-color: #FF7642;
+  --dark-color: #161727;
+  --gray-color: #858585;
+  --gray-light-color: #F5F5F5;
+}
+
+/* container */
+html {
+  scroll-behavior: smooth;
+}
+
+body {}
+
+.font-expo {
+  font-family: "Cairo", sans-serif;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1024px) {
+
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+/* Colors */
+.bg-main {
+  background-color: var(--main-color);
+}
+
+.text-main {
+  color: var(--main-color);
+}
+
+.bg-gray-light {
+  background-color: var(--gray-light-color);
+}
+
+.bg-gray {
+  background-color: var(--gray-color);
+}
+
+.text-gray {
+  color: var(--gray-color);
+}
+
+.bg-dark {
+  background-color: var(--dark-color);
+}
+
+.text-dark {
+  color: var(--dark-color);
+}
+
+select,
+input {
+  outline: none !important;
+}
+
+
+button {
+  cursor: pointer;
+}
