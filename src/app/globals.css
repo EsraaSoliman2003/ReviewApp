@@ -1,6 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 @custom-variant dark (&:is(.dark *));
+
+@font-face {
+  font-family: "Cairo";
+  src: url("/fonts/cairo/Cairo-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Cairo";
+  src: url("/fonts/cairo/Cairo-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Cairo";
+  src: url("/fonts/cairo/Cairo-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Cairo";
+  src: url("/fonts/cairo/Cairo-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
 
 :root {
   --main-color: #FF7642;
@@ -14,9 +37,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body {}
-
-.font-expo {
+body {
   font-family: "Cairo", sans-serif;
 }
 
