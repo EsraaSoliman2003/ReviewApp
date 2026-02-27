@@ -35,7 +35,7 @@ export default function Reviews() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="absolute top-35 lg:top-30 left-[60%] lg:left-[58%]"
+            className="absolute top-45 lg:top-35 left-[60%] lg:left-[58%]"
           >
             <ReviewCard
               name="Sarah Mitchell"
@@ -50,7 +50,7 @@ export default function Reviews() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="absolute top-100 lg:top-85 xl:top-92 left-[50%] lg:left-[34%] xl:left-[40%]"
+            className="absolute top-110 lg:top-95 xl:top-95 left-[50%] lg:left-[34%] xl:left-[40%]"
           >
             <ReviewCard
               name="Sarah Mitchell"
@@ -65,7 +65,7 @@ export default function Reviews() {
             variants={thirdCardVariants}
             initial="hidden"
             animate={["visible", "float"]}
-            className="absolute top-107 -right-0 xl:-right-5 hidden lg:block"
+            className="absolute top-115 -right-3 xl:-right-5 hidden lg:block"
           >
             <ReviewCard
               name="Sarah Mitchell"

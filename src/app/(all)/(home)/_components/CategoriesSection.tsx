@@ -102,27 +102,44 @@ export default function CategoriesSection() {
 
           return (
             <SwiperSlide key={cat.id}>
-              <div
-                onClick={() => handleChangeCategory(cat.id)}
-                className={`
+              <div className="pb-5">
+                <div
+                  onClick={() => handleChangeCategory(cat.id)}
+                  className={`
                   group relative h-40 flex flex-col items-center justify-center gap-3
                   rounded-xl border-2 cursor-pointer transition-all duration-200
                   ${isActive
-                    ? 'border-[#070e3b] bg-[#070e3b] text-white shadow-lg'
+                    ? `
+                      border-[#070e3b] bg-[#070e3b] text-white shadow-lg
+                      after:content-['']
+                      after:absolute
+                      after:-bottom-3
+                      after:left-1/2
+                      after:-translate-x-1/2
+                      after:w-0
+                      after:h-0
+                      after:border-l-[12px]
+                      after:border-r-[12px]
+                      after:border-t-[12px]
+                      after:border-l-transparent
+                      after:border-r-transparent
+                      after:border-t-[#070e3b]
+                    `
                     : 'border-gray-200 bg-white text-gray-700 hover:border-[#070e3b] hover:shadow-md'
                   }
                 `}
-              >
-                {/* Icon with dynamic color */}
-                <Icon
-                  size={32}
-                  className={`
+                >
+                  {/* Icon with dynamic color */}
+                  <Icon
+                    size={32}
+                    className={`
                     transition-colors duration-200
                     ${isActive ? 'text-white' : 'text-[#070e3b] group-hover:text-[#070e3b]'}
                   `}
-                  strokeWidth={1.5}
-                />
-                <span className="font-medium text-sm sm:text-base">{cat.name}</span>
+                    strokeWidth={1.5}
+                  />
+                  <span className="font-medium text-sm sm:text-base">{cat.name}</span>
+                </div>
               </div>
             </SwiperSlide>
           );
