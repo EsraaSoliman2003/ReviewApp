@@ -10,7 +10,11 @@ export default function Content() {
   };
 
   return (
-    <div className="flex flex-col justify-between py-12 md:py-35 text-white">
+    <div className="
+      flex flex-col justify-center md:justify-between items-center md:items-start 
+      py-12 md:py-35 text-white h-screen md:h-auto text-center md:text-start
+    "
+    >
       <div className='flex flex-col gap-8'>
         {/* Animated heading */}
         <motion.h2
@@ -18,7 +22,7 @@ export default function Content() {
           animate="visible"
           variants={fadeInUp}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
+          className="text-4xl md:text-[2.7rem] lg:text-6xl font-bold leading-tight mb-6"
         >
           Clients
           Testimonial
@@ -30,7 +34,7 @@ export default function Content() {
           animate="visible"
           variants={fadeInUp}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-gray-300 text-lg md:text-xl max-w-xl leading-relaxed w-full lg:w-2/3"
+          className="text-gray-300 text-lg md:text-lg max-w-xl lg:px-3 leading-relaxed w-full md:w-1/2 lg:w-1/2 xl:w-2/3"
         >
           We help businesses grow with powerful digital solutions tailored to
           their goals. Our team focuses on strategy, design, and performance

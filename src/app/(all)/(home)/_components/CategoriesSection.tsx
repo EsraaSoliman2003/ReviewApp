@@ -131,7 +131,7 @@ export default function CategoriesSection() {
 
       {/* Optional pagination could be added here */}
       <div className="py-20 grid grid-cols-3">
-        {
+        {/* {
           [1, 2, 3].map(() => (
             <ReviewCard
               name="Sarah Mitchell"
@@ -140,7 +140,7 @@ export default function CategoriesSection() {
               image="/girl.jpg"
             />
           ))
-        }
+        } */}
       </div>
     </section>
   );

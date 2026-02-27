@@ -9,7 +9,7 @@ export default function Reviews() {
 
                 {/* Cards Grid */}
                 <div className="grid md:grid-cols-3 gap-8 justify-items-center">
-                    <div className="absolute top-30 left-[58%]">
+                    <div className="absolute top-35 lg:top-30 left-[60%] lg:left-[58%]">
                         <ReviewCard
                             name="Sarah Mitchell"
                             rate={5}
@@ -17,7 +17,7 @@ export default function Reviews() {
                             image="/girl.jpg"
                         />
                     </div>
-                    <div className="absolute top-92 lg:left-[40%]">
+                    <div className="absolute top-100 lg:top-85 xl:top-92 left-[50%] lg:left-[33%] xl:left-[40%]">
                         <ReviewCard
                             name="Sarah Mitchell"
                             rate={5}
@@ -25,7 +25,7 @@ export default function Reviews() {
                             image="/girl.jpg"
                         />
                     </div>
-                    <div className="absolute top-107 -right-5">
+                    <div className="absolute top-107 -right-0 xl:-right-5 hidden lg:block">
                         <ReviewCard
                             name="Sarah Mitchell"
                             rate={5}

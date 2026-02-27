@@ -16,7 +16,7 @@ export default function ReviewCard({
     image,
 }: Props) {
     return (
-        <div className="relative bg-white p-6 rounded-4xl shadow-lg max-w-sm w-85">
+        <div className="relative bg-white p-4 xl:p-6 rounded-4xl shadow-lg max-w-sm w-75 xl:w-85">
 
             {/* Avatar */}
             {image && (
