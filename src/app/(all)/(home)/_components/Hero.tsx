@@ -5,7 +5,7 @@ import Reviews from './Reviews'
 export default function Hero() {
     return (
         <div
-            className="relative min-h-screen bg-cover bg-center bg-no-repeat"
+            className="relative min-h-screen bg-cover bg-center bg-no-repeat bg-fixed"
             style={{ backgroundImage: "url('/wallpaper.png')" }}
         >
             {/* Overlay */}

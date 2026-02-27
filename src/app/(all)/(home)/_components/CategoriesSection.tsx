@@ -130,17 +130,31 @@ export default function CategoriesSection() {
       </Swiper>
 
       {/* Optional pagination could be added here */}
-      <div className="py-20 grid grid-cols-3">
-        {/* {
-          [1, 2, 3].map(() => (
-            <ReviewCard
-              name="Sarah Mitchell"
-              rate={5}
-              review="This service completely transformed our workflow. The team was professional and exceeded our expectations."
-              image="/girl.jpg"
-            />
+      <div className="
+        py-20 justify-items-center grid grid-cols-1 md:grid-cols-2 
+        lg:grid-cols-3 gap-y-20 lg:gap-x-20 md:gap-x-0 xl:gap-0
+      "
+      >
+        {
+          [1, 2, 3].map((num) => (
+            <div key={num}>
+              <ReviewCard
+                name="Sarah Mitchell"
+                rate={5}
+                review="This service completely transformed our workflow. The team was professional and exceeded our expectations."
+                image="/girl.jpg"
+              />
+            </div>
           ))
-        } */}
+        }
+        <div className="lg:hidden">
+          <ReviewCard
+            name="Sarah Mitchell"
+            rate={5}
+            review="This service completely transformed our workflow. The team was professional and exceeded our expectations."
+            image="/girl.jpg"
+          />
+        </div>
       </div>
     </section>
   );

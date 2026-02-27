@@ -11,7 +11,7 @@ export default function Content() {
 
   return (
     <div className="
-      flex flex-col justify-center md:justify-between items-center md:items-start 
+      flex flex-col justify-center items-center md:items-start 
       py-12 md:py-35 text-white h-screen md:h-auto text-center md:text-start
     "
     >

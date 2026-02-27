@@ -1,41 +1,61 @@
+"use client"; // Required for Framer Motion to work with client-side animations
+
 import ReviewCard from "@/components/ReviewCard/ReviewCard";
+import { motion } from "framer-motion";
 import React from "react";
 
 export default function Reviews() {
-    return (
-        <section className="py-20 px-6 flex-1 h-full hidden md:block">
-            <div className="max-w-6xl mx-auto">
+  return (
+    <section className="py-20 px-6 flex-1 h-full hidden md:block">
+      <div className="max-w-6xl mx-auto">
+        {/* Cards Grid */}
+        <div className="grid md:grid-cols-3 gap-8 justify-items-center">
+          {/* First card */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="absolute top-35 lg:top-30 left-[60%] lg:left-[58%]"
+          >
+            <ReviewCard
+              name="Sarah Mitchell"
+              rate={5}
+              review="This service completely transformed our workflow. The team was professional and exceeded our expectations."
+              image="/girl.jpg"
+            />
+          </motion.div>
 
+          {/* Second card */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="absolute top-100 lg:top-85 xl:top-92 left-[50%] lg:left-[34%] xl:left-[40%]"
+          >
+            <ReviewCard
+              name="Sarah Mitchell"
+              rate={5}
+              review="This service completely transformed our workflow. The team was professional and exceeded our expectations."
+              image="/girl.jpg"
+            />
+          </motion.div>
 
-                {/* Cards Grid */}
-                <div className="grid md:grid-cols-3 gap-8 justify-items-center">
-                    <div className="absolute top-35 lg:top-30 left-[60%] lg:left-[58%]">
-                        <ReviewCard
-                            name="Sarah Mitchell"
-                            rate={5}
-                            review="This service completely transformed our workflow. The team was professional and exceeded our expectations."
-                            image="/girl.jpg"
-                        />
-                    </div>
-                    <div className="absolute top-100 lg:top-85 xl:top-92 left-[50%] lg:left-[33%] xl:left-[40%]">
-                        <ReviewCard
-                            name="Sarah Mitchell"
-                            rate={5}
-                            review="This service completely transformed our workflow. The team was professional and exceeded our expectations."
-                            image="/girl.jpg"
-                        />
-                    </div>
-                    <div className="absolute top-107 -right-0 xl:-right-5 hidden lg:block">
-                        <ReviewCard
-                            name="Sarah Mitchell"
-                            rate={5}
-                            review="This service completely transformed our workflow. The team was professional and exceeded our expectations."
-                            image="/girl.jpg"
-                        />
-                    </div>
-
-                </div>
-            </div>
-        </section>
-    );
+          {/* Third card */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="absolute top-107 -right-0 xl:-right-5 hidden lg:block"
+          >
+            <ReviewCard
+              name="Sarah Mitchell"
+              rate={5}
+              review="This service completely transformed our workflow. The team was professional and exceeded our expectations."
+              image="/girl.jpg"
+            />
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
 }
