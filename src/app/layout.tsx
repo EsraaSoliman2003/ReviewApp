@@ -19,13 +19,17 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"} data-scroll-behavior="smooth">
+    <html
+      lang={locale}
+      dir={locale === "ar" ? "rtl" : "ltr"}
+      data-scroll-behavior="smooth"
+    >
       <body
         className={`font-expo`}
       >
         <Toaster position="bottom-right" />
         <NextIntlClientProvider messages={messages}>
-            <MainProvider lang={locale ?? "en"}>{children}</MainProvider>
+          <MainProvider lang={locale ?? "ar"}>{children}</MainProvider>
         </NextIntlClientProvider>
       </body>
     </html>

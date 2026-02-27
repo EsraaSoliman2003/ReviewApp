@@ -26,10 +26,8 @@
 }
 
 :root {
-  --main-color: #FF7642;
-  --dark-color: #161727;
+  --main-color: #070e3b;
   --gray-color: #858585;
-  --gray-light-color: #F5F5F5;
 }
 
 /* container */
@@ -88,8 +86,8 @@ body {
   color: var(--main-color);
 }
 
-.bg-gray-light {
-  background-color: var(--gray-light-color);
+.border-main {
+  border: 1px solid var(--main-color);
 }
 
 .bg-gray {
@@ -98,14 +96,6 @@ body {
 
 .text-gray {
   color: var(--gray-color);
-}
-
-.bg-dark {
-  background-color: var(--dark-color);
-}
-
-.text-dark {
-  color: var(--dark-color);
 }
 
 select,
