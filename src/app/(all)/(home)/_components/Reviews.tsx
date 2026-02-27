@@ -1,10 +1,30 @@
 "use client"; // Required for Framer Motion to work with client-side animations
 
 import ReviewCard from "@/components/ReviewCard/ReviewCard";
-import { motion } from "framer-motion";
-import React from "react";
+import { motion, Variants } from "framer-motion"; import React from "react";
 
 export default function Reviews() {
+  const thirdCardVariants: Variants = {
+    hidden: { opacity: 0, y: -40 },
+
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut" as const,
+      },
+    },
+
+    float: {
+      y: [0, -20, 0],
+      transition: {
+        duration: 4,
+        repeat: Infinity,
+        ease: "easeInOut" as const,
+      },
+    },
+  };
   return (
     <section className="py-20 px-6 flex-1 h-full hidden md:block">
       <div className="max-w-6xl mx-auto">
@@ -42,9 +62,9 @@ export default function Reviews() {
 
           {/* Third card */}
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+            variants={thirdCardVariants}
+            initial="hidden"
+            animate={["visible", "float"]}
             className="absolute top-107 -right-0 xl:-right-5 hidden lg:block"
           >
             <ReviewCard
