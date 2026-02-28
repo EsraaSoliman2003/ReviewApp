@@ -82,7 +82,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-[#070e3b] shadow-lg" : "bg-transparent"
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-main shadow-lg" : "bg-transparent"
         }`}
     >
       <div className="max-w-6xl mx-auto flex items-center justify-between p-4 text-white">
