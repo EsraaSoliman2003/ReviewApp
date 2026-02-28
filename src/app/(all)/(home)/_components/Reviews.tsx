@@ -1,10 +1,12 @@
 "use client"; // Required for Framer Motion to work with client-side animations
 
 import ReviewCard from "@/components/ReviewCard/ReviewCard";
-import { motion, Variants } from "framer-motion"; import Image from "next/image";
+import { motion, Variants } from "framer-motion";import { useTranslations } from "next-intl";
+ import Image from "next/image";
 import React from "react";
 
 export default function Reviews() {
+  const t = useTranslations();
   const thirdCardVariants: Variants = {
     hidden: { opacity: 0, y: -40 },
 
@@ -29,8 +31,8 @@ export default function Reviews() {
 
   const place = {
     id: 1,
-    name: "Amama Cafe",
-    image: "/girl.jpg",
+    name: "عنوان القهوة",
+    image: "/cafe.jpg",
     images: [
       "/girl.jpg",
       "/girl.jpg",
@@ -49,16 +51,15 @@ export default function Reviews() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="absolute top-45 lg:top-35 left-[60%] lg:left-[58%]"
+            className={`absolute top-45 lg:top-35 ${t("dir") === "rtl" ? "right-[60%] lg:right-[58%]" : "left-[60%] lg:left-[58%]"}`}
           >
             <ReviewCard
               id={1}
-              name="Sarah Mitchell"
+              name="أحمد على"
               rate={5}
-              review="This service completely transformed our workflow."
-              image="/girl.jpg"
+              review="المكان كان رائع جدًا، الخدمة ممتازة والأجواء مريحة. بالتأكيد سأكرر الزيارة مرة أخرى."
+              image="/man.jpg"
               place={place}
-
             />
           </motion.div>
 
@@ -67,14 +68,14 @@ export default function Reviews() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="absolute top-110 lg:top-95 xl:top-95 left-[50%] lg:left-[34%] xl:left-[40%]"
+            className={`absolute top-110 lg:top-95 xl:top-95 ${t("dir") === "rtl" ? "right-[50%] lg:right-[34%] xl:right-[40%]" : "left-[50%] lg:left-[34%] xl:left-[40%]"}`}
           >
             <ReviewCard
               id={1}
-              name="Sarah Mitchell"
+              name="أحمد على"
               rate={5}
-              review="This service completely transformed our workflow."
-              image="/girl.jpg"
+              review="المكان كان رائع جدًا، الخدمة ممتازة والأجواء مريحة. بالتأكيد سأكرر الزيارة مرة أخرى."
+              image="/man.jpg"
               place={place}
             />
           </motion.div>
@@ -84,14 +85,14 @@ export default function Reviews() {
             variants={thirdCardVariants}
             initial="hidden"
             animate={["visible", "float"]}
-            className="absolute top-115 -right-3 xl:-right-5 hidden lg:block"
+            className={`absolute top-115 ${t("dir") === "rtl" ? "-left-3 xl:-left-5" : "-right-3 xl:-right-5"} hidden lg:block`}
           >
             <ReviewCard
               id={1}
-              name="Sarah Mitchell"
+              name="أحمد على"
               rate={5}
-              review="This service completely transformed our workflow."
-              image="/girl.jpg"
+              review="المكان كان رائع جدًا، الخدمة ممتازة والأجواء مريحة. بالتأكيد سأكرر الزيارة مرة أخرى."
+              image="/man.jpg"
               place={place}
 
             />

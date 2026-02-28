@@ -34,7 +34,7 @@ export default function ReviewCard({
             {image && (
                 <Link
                     href={`/user/${id}`}
-                    className="absolute -top-10 -left-8 w-26 h-26 rounded-full overflow-hidden border-10 border-white">
+                    className="absolute -top-10 -right-8 w-26 h-26 rounded-full overflow-hidden border-10 border-white">
                     <Image
                         src={image}
                         alt={name}

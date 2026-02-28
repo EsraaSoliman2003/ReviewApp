@@ -47,8 +47,8 @@ export default function CategoriesSection() {
 
   const place = {
     id: 1,
-    name: "Amama Cafe",
-    image: "/girl.jpg",
+    name: "عنوان القهوة",
+    image: "/cafe.jpg",
     images: [
       "/girl.jpg",
       "/girl.jpg",
@@ -56,13 +56,13 @@ export default function CategoriesSection() {
       "/girl.jpg",
     ]
   }
-
+  
   return (
-    <section className="container mx-auto py-12 px-4" dir={t("dir") === "rtl" ? "rtl" : "ltr"}>
+    <section className="container mx-auto py-12 px-4">
       {/* Header */}
       <div className="flex items-center justify-between mb-8">
         <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-          {t("categories")}
+          {"التقييمات الشائعة"}
         </h2>
 
         <div className="flex items-center gap-4">
@@ -70,7 +70,7 @@ export default function CategoriesSection() {
             href="/categories"
             className="text-sm font-medium text-[#070e3b] hover:text-[#070e3b]/80 transition-colors px-3 py-1.5 rounded-md border border-[#070e3b]/20 hover:border-[#070e3b]"
           >
-            {t("viewAll")}
+            {"عرض الكل"}
           </Link>
 
           {/* Custom Navigation Arrows */}
@@ -168,12 +168,12 @@ export default function CategoriesSection() {
           [1, 2, 3, 4, 5, 6].map((num) => (
             <div key={num}>
               <ReviewCard
-                id={1}
-                name="Sarah Mitchell"
-                rate={5}
-                review="This service completely transformed our workflow."
-                image="/girl.jpg"
-                place={place}
+              id={1}
+              name="أحمد على"
+              rate={5}
+              review="المكان كان رائع جدًا، الخدمة ممتازة والأجواء مريحة. بالتأكيد سأكرر الزيارة مرة أخرى."
+              image="/man.jpg"
+              place={place}
               />
             </div>
           ))

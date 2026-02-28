@@ -18,10 +18,10 @@ export default function Content() {
 
   // List of placeholder texts to cycle through
   const placeholders = [
-    "Search testimonials...",
-    "Find by client name...",
-    "Type to filter...",
-    "Explore feedback...",
+    "ابحث في آراء العملاء...",
+    "اكتب اسم العميل...",
+    "اكتب للبحث...",
+    "استكشف التجارب...",
   ];
 
   // Ref to store timeout
@@ -85,8 +85,7 @@ export default function Content() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-4xl md:text-[2.7rem] lg:text-6xl font-bold leading-tight"
         >
-          Clients
-          Testimonial
+          آراء عملائنا
         </motion.h2>
 
         {/* Animated paragraph */}
@@ -97,9 +96,8 @@ export default function Content() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-gray-300 text-lg md:text-lg max-w-xl lg:px-3 leading-relaxed w-full md:w-1/2 lg:w-1/2 xl:w-2/3"
         >
-          We help businesses grow with powerful digital solutions tailored to
-          their goals. Our team focuses on strategy, design, and performance
-          to deliver measurable impact.
+          اكتشف أفضل الأماكن من خلال تجارب وآراء حقيقية.
+          نساعدك في اختيار وجهتك القادمة بكل سهولة وثقة.
         </motion.p>
 
         {/* Animated search bar with typing placeholder */}
@@ -127,7 +125,7 @@ export default function Content() {
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <button className="bg-white text-black py-2 px-10 rounded-3xl text-xl font-semibold">
-            Read More
+            اكتشف المزيد
           </button>
         </motion.div>
       </div>

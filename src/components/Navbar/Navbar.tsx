@@ -1,5 +1,6 @@
 "use client";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState, useRef } from "react";
 
@@ -16,10 +17,10 @@ export default function Navbar() {
 
   // List of placeholder texts to cycle through
   const placeholders = [
-    "Search...",
-    "Find products...",
-    "Explore...",
-    "Type here..."
+    "ابحث في آراء العملاء...",
+    "اكتب اسم العميل...",
+    "اكتب للبحث...",
+    "استكشف التجارب...",
   ];
 
   // Ref to store timeout
@@ -85,9 +86,17 @@ export default function Navbar() {
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-main shadow-lg" : "bg-transparent"
         }`}
     >
-      <div className="max-w-6xl mx-auto flex items-center justify-between p-4 text-white">
+      <div className="max-w-6xl mx-auto flex items-center justify-between p-2 text-white">
         {/* Logo */}
-        <div className="text-xl font-bold">MyLogo</div>
+        <Link href="/" className="relative w-32 h-15 block">
+          <Image
+            src="/logo.png"
+            alt="Logo"
+            fill
+            className="object-contain"
+            priority
+          />
+        </Link>
 
         {/* Search Bar with Typing Placeholder */}
         <div className="ml-4 hidden md:block">
