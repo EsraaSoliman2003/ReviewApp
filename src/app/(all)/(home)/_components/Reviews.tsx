@@ -1,7 +1,8 @@
 "use client"; // Required for Framer Motion to work with client-side animations
 
 import ReviewCard from "@/components/ReviewCard/ReviewCard";
-import { motion, Variants } from "framer-motion"; import React from "react";
+import { motion, Variants } from "framer-motion"; import Image from "next/image";
+import React from "react";
 
 export default function Reviews() {
   const thirdCardVariants: Variants = {
@@ -25,6 +26,19 @@ export default function Reviews() {
       },
     },
   };
+
+  const place = {
+    id: 1,
+    name: "Amama Cafe",
+    image: "/girl.jpg",
+    images: [
+      "/girl.jpg",
+      "/girl.jpg",
+      "/girl.jpg",
+      "/girl.jpg",
+    ]
+  }
+
   return (
     <section className="py-20 px-6 flex-1 h-full hidden md:block">
       <div className="max-w-6xl mx-auto">
@@ -38,10 +52,13 @@ export default function Reviews() {
             className="absolute top-45 lg:top-35 left-[60%] lg:left-[58%]"
           >
             <ReviewCard
+              id={1}
               name="Sarah Mitchell"
               rate={5}
-              review="This service completely transformed our workflow. The team was professional and exceeded our expectations."
+              review="This service completely transformed our workflow."
               image="/girl.jpg"
+              place={place}
+
             />
           </motion.div>
 
@@ -53,10 +70,12 @@ export default function Reviews() {
             className="absolute top-110 lg:top-95 xl:top-95 left-[50%] lg:left-[34%] xl:left-[40%]"
           >
             <ReviewCard
+              id={1}
               name="Sarah Mitchell"
               rate={5}
-              review="This service completely transformed our workflow. The team was professional and exceeded our expectations."
+              review="This service completely transformed our workflow."
               image="/girl.jpg"
+              place={place}
             />
           </motion.div>
 
@@ -68,10 +87,13 @@ export default function Reviews() {
             className="absolute top-115 -right-3 xl:-right-5 hidden lg:block"
           >
             <ReviewCard
+              id={1}
               name="Sarah Mitchell"
               rate={5}
-              review="This service completely transformed our workflow. The team was professional and exceeded our expectations."
+              review="This service completely transformed our workflow."
               image="/girl.jpg"
+              place={place}
+
             />
           </motion.div>
         </div>

@@ -1,11 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { 
-  Facebook, 
-  Twitter, 
-  Instagram, 
-  Linkedin, 
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
   Youtube,
   Mail,
   Phone,
@@ -48,23 +48,16 @@ export default function Footer() {
         {/* Main footer content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand & Newsletter */}
-          <div>
-            <h3 className="text-white text-lg font-bold mb-4">
+          <div className='flex flex-col justify-between'>
+            <div className="text-white text-3xl font-bold mb-4">
+              LOGO
+            </div>
+            <h3 className="text-white text-lg mb-4">
               {t('brandName') || 'موقعك'}
             </h3>
-            <p className="text-sm mb-4">
+            <p className="text-sm mb-4 max-w-55">
               {t('footerDescription') || 'أفضل منصة لاكتشاف الأعمال والخدمات في منطقتك.'}
             </p>
-            <div className="flex">
-              <input
-                type="email"
-                placeholder={t('emailPlaceholder') || 'بريدك الإلكتروني'}
-                className="flex-1 bg-gray-800 text-white rounded-r-lg px-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-[#070e3b]"
-              />
-              <button className="bg-[#070e3b] hover:bg-[#070e3b]/80 text-white px-4 py-2 rounded-l-lg text-sm font-medium transition">
-                {t('subscribe') || 'اشترك'}
-              </button>
-            </div>
           </div>
 
           {/* Quick Links */}

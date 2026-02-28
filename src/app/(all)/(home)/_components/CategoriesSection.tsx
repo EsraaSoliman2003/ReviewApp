@@ -45,6 +45,18 @@ export default function CategoriesSection() {
     }
   }, []); // Empty dependency array – runs only on mount
 
+  const place = {
+    id: 1,
+    name: "Amama Cafe",
+    image: "/girl.jpg",
+    images: [
+      "/girl.jpg",
+      "/girl.jpg",
+      "/girl.jpg",
+      "/girl.jpg",
+    ]
+  }
+
   return (
     <section className="container mx-auto py-12 px-4" dir={t("dir") === "rtl" ? "rtl" : "ltr"}>
       {/* Header */}
@@ -109,7 +121,7 @@ export default function CategoriesSection() {
                   group relative h-40 flex flex-col items-center justify-center gap-3
                   rounded-xl border-2 cursor-pointer transition-all duration-200
                   ${isActive
-                    ? `
+                      ? `
                       border-[#070e3b] bg-[#070e3b] text-white shadow-lg
                       after:content-['']
                       after:absolute
@@ -125,8 +137,8 @@ export default function CategoriesSection() {
                       after:border-r-transparent
                       after:border-t-[#070e3b]
                     `
-                    : 'border-gray-200 bg-white text-gray-700 hover:border-[#070e3b] hover:shadow-md'
-                  }
+                      : 'border-gray-200 bg-white text-gray-700 hover:border-[#070e3b] hover:shadow-md'
+                    }
                 `}
                 >
                   {/* Icon with dynamic color */}
@@ -149,29 +161,23 @@ export default function CategoriesSection() {
       {/* Optional pagination could be added here */}
       <div className="
         py-20 justify-items-center grid grid-cols-1 md:grid-cols-2 
-        lg:grid-cols-3 gap-y-20 lg:gap-x-20 md:gap-x-0 xl:gap-0
+        lg:grid-cols-3 gap-y-20 lg:gap-x-20 md:gap-x-0 xl:gap-x-0
       "
       >
         {
-          [1, 2, 3].map((num) => (
+          [1, 2, 3, 4, 5, 6].map((num) => (
             <div key={num}>
               <ReviewCard
+                id={1}
                 name="Sarah Mitchell"
                 rate={5}
-                review="This service completely transformed our workflow. The team was professional and exceeded our expectations."
+                review="This service completely transformed our workflow."
                 image="/girl.jpg"
+                place={place}
               />
             </div>
           ))
         }
-        <div className="lg:hidden">
-          <ReviewCard
-            name="Sarah Mitchell"
-            rate={5}
-            review="This service completely transformed our workflow. The team was professional and exceeded our expectations."
-            image="/girl.jpg"
-          />
-        </div>
       </div>
     </section>
   );
