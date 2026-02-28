@@ -86,9 +86,12 @@ export default function Navbar() {
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-main shadow-lg" : "bg-transparent"
         }`}
     >
-      <div className="max-w-6xl mx-auto flex items-center justify-between p-2 text-white">
+      <div className="container flex items-center justify-between p-2 text-white">
         {/* Logo */}
-        <Link href="/" className="relative w-32 h-15 block">
+        <Link
+          href="/"
+          className="relative w-13 h-10 sm:w-15 sm:h-12 md:w-32 md:h-12 block "
+        >
           <Image
             src="/logo.png"
             alt="Logo"
@@ -105,13 +108,17 @@ export default function Navbar() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder={placeholder}
-            className="px-4 py-2 rounded-full bg-white/10 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/30 w-48 md:w-90 lg:md:w-120 transition-all"
+            className="
+              px-4 py-2 rounded-full bg-white/10 text-white 
+              placeholder-white/70 focus:outline-none focus:ring-2 
+              focus:ring-white/30 w-48 md:w-90 lg:md:w-120 transition-all
+            "
             aria-label="Search"
           />
         </div>
 
         {/* Navigation Links */}
-        <div className="flex gap-6 font-medium">
+        <div className="flex gap-6 font-medium text-sm sm:text-[16px]">
           <Link href="/" className="hover:text-gray-300 transition">
             {t("Home")}
           </Link>
