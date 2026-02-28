@@ -55,10 +55,10 @@ export default function Reviews() {
           >
             <ReviewCard
               id={1}
-              name="أحمد على"
+              name="محمد ايهاب"
               rate={5}
               review="المكان كان رائع جدًا، الخدمة ممتازة والأجواء مريحة. بالتأكيد سأكرر الزيارة مرة أخرى."
-              image="/man.jpg"
+              image="/man.webp"
               place={place}
             />
           </motion.div>
@@ -72,10 +72,10 @@ export default function Reviews() {
           >
             <ReviewCard
               id={1}
-              name="أحمد على"
+              name="محمد ايهاب"
               rate={5}
               review="المكان كان رائع جدًا، الخدمة ممتازة والأجواء مريحة. بالتأكيد سأكرر الزيارة مرة أخرى."
-              image="/man.jpg"
+              image="/man.webp"
               place={place}
             />
           </motion.div>
@@ -89,10 +89,10 @@ export default function Reviews() {
           >
             <ReviewCard
               id={1}
-              name="أحمد على"
+              name="محمد ايهاب"
               rate={5}
               review="المكان كان رائع جدًا، الخدمة ممتازة والأجواء مريحة. بالتأكيد سأكرر الزيارة مرة أخرى."
-              image="/man.jpg"
+              image="/man.webp"
               place={place}
 
             />
