@@ -61,14 +61,14 @@ export default function CategoriesSection() {
     <section className="container mx-auto py-12 px-4">
       {/* Header */}
       <div className="flex items-center justify-between mb-8">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">
           {"التقييمات الشائعة"}
         </h2>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-0 sm:gap-4">
           <Link
             href="/categories"
-            className="text-sm font-medium text-[#070e3b] hover:text-[#070e3b]/80 transition-colors px-3 py-1.5 rounded-md border border-[#070e3b]/20 hover:border-[#070e3b]"
+            className="text-sm font-medium text-[#070e3b] hover:text-[#070e3b]/80 transition-colors sm:px-3 py-1.5 rounded-md hover:border-[#070e3b]"
           >
             {"عرض الكل"}
           </Link>
