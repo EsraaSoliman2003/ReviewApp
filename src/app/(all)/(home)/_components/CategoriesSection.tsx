@@ -169,10 +169,10 @@ export default function CategoriesSection() {
             <div key={num}>
               <ReviewCard
               id={1}
-              name="محمد ايهاب"
+              name="أحمد على"
               rate={5}
               review="المكان كان رائع جدًا، الخدمة ممتازة والأجواء مريحة. بالتأكيد سأكرر الزيارة مرة أخرى."
-              image="/man.webp"
+              image="/man.jpg"
               place={place}
               />
             </div>
